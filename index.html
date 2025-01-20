@@ -19,7 +19,20 @@
 
 
 
-
     
+    <script>
+      document.querySelector("button").addEventListener("click", function () {
+        const radius = parseFloat(document.getElementById("radius").value);
+        const perimeter = 2 * Math.PI * radius;
+        const area = Math.PI * Math.pow(radius, 2);
+        document.getElementById(
+          "prmtr"
+        ).textContent = `Perimetr: ${perimeter.toFixed(2)}`;
+        document.getElementById("sahe").textContent = `Sahe: ${area.toFixed(
+          2
+        )}`;
+        radiusInput.value = "";
+      });
+    </script>
   </body>
 </html>
